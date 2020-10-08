@@ -90,6 +90,7 @@ const Form = () => {
       <input
         id="name"
         name="name"
+        data-cy="name"
         type="text"
         value={formState.name}
         onChange={inputChange}
@@ -99,6 +100,7 @@ const Form = () => {
       <input
         id="email"
         name="email"
+        data-cy="email"
         type="text"
         value={formState.email}
         onChange={inputChange}
@@ -108,6 +110,7 @@ const Form = () => {
       <input
         id="password"
         name="password"
+        data-cy="password"
         type="text"
         value={formState.password}
         onChange={inputChange}
@@ -124,11 +127,12 @@ const Form = () => {
       <input
         id="terms"
         name="terms"
+        data-cy="terms"
         type="checkbox"
         checked={formState.terms}
         onChange={inputChange}
       />
-      <button type="submit" disabled={buttonIsDisabled}>
+      <button data-cy="submit" type="submit" disabled={buttonIsDisabled}>
         submit
       </button>
       <pre>{JSON.stringify(post, null, 2)}</pre>
